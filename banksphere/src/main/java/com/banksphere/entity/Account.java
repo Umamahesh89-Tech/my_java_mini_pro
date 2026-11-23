@@ -26,8 +26,11 @@ public class Account {
     @Column(nullable = false, precision = 14, scale = 2)
     private BigDecimal balance;
 
-    @Column(name = "opened_on", nullable = false)
+    @Column(name = "opened_at", nullable = false)
     private LocalDate openedOn;
+
+    @Column(nullable = false)
+    private boolean active = true;
 
     public Account() {
     }
@@ -87,5 +90,13 @@ public class Account {
 
     public void setOpenedOn(LocalDate openedOn) {
         this.openedOn = openedOn;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

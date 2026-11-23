@@ -39,3 +39,5 @@ data/
 
 # Postman local files (optional)
 .postman/
+# H2 Database
+data/
